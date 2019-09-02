@@ -535,3 +535,11 @@
 
 
 <app-xyz></app-xyz>
+
+<ul>
+  <li *ngFor="let user of users">
+<app-user [nameUser]="user" ></app-user>
+  </li>
+</ul>
+
+<app-user></app-user>
