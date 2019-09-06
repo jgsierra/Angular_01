@@ -565,13 +565,44 @@
   <p>Array de usuarios</p>
   <ul>
       <li *ngFor="let user of users">
-        {{ user }} 
-      <button>
-        x
-      </button></li>
+        {{ user }} <button (click)="deleteUser(user)">x</button></li>
   </ul>
 
-  <button (click)="Avisar()">
-    | Desplegar |
-  </button>
+  <button (click)="Avisar()">    | Desplegar |  </button>
+
 </div>
+
+<div >
+  <div class="content">
+      <h2>Doble enlace de datos</h2>
+      
+  </div>
+  <h5>utilizando [(ngModel)]</h5>
+  <form>
+<input type="text" name="name" [(ngModel)]="name">
+<input type="text" name="age" [(ngModel)]="age">
+  </form>
+Nombre = {{ name }} <br>
+Edad = {{ age}}
+
+<hr>
+
+<div class="container">
+
+  <p> * Angular necesita trabajar con un backend. Sql o No, O servicios como firebase de google que es un db que se conecta angular sin un lenguaje de programación. Para Backend esta nodejs.Que es un entorno de ejecución de Javascript.Ver el  Stack Mean. 
+      Vamos a usar servicios para obtener y enviar datos a una bd. 
+      <a href="https://JsonPlaceHolder.typicode.com " target="_blank" rel="noopener"> Ver recursos json</a>
+      Utilizaremos http para traer los datos del server.Creamos un servicio en la terminal ng generate service data. Se crean data.service.spec.ts(para testear el servicio) y data.services.ts(es el servicio en si.)
+      Con el modulo HTTP podremos mostar datos 
+  </p>  
+
+ <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * *muestro la data obtenida del json * * * * * * * * * -->
+ <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <div *ngFor="let post of posts">
+      <h3>{{ post.title }}</h3>
+      <p> {{ post.body }}</p>
+
+  </div>
+</div>
+
