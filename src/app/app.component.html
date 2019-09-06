@@ -543,4 +543,35 @@
 </ul>
 
 
-<app-user></app-user>
+<div style="align-content: center">
+  <p> Nombre:> {{ name }} <</p>
+  <p> Edad:> {{ age }} <</p>
+  <p> Direccion:> {{ address.street  }} Ciudad:> {{ address.city }}<</p>
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+          {{ hobby }}
+    </li>
+  </ul>
+</div>
+
+<h2>Formulario</h2>
+
+<form (submit)="AddUser(newUser)">
+<input type="text" #newUser>   
+<button>Send User</button>
+</form>
+
+<div>
+  <p>Array de usuarios</p>
+  <ul>
+      <li *ngFor="let user of users">
+        {{ user }} 
+      <button>
+        x
+      </button></li>
+  </ul>
+
+  <button (click)="Avisar()">
+    | Desplegar |
+  </button>
+</div>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XyzComponent implements OnInit {
 
-  titulo = '0 descensos';
+  titulo = '0 descensos - xyz';
   constructor() { }
 
   ngOnInit() {
