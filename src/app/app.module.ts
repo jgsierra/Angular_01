@@ -7,14 +7,17 @@ import { RouterModule, Route} from '@angular/router'
 import { AppComponent } from './app.component';
 import { XyzComponent } from './xyz/xyz.component';
 import { UserComponent } from './user/user.component';
+import { AboutComponent } from './about/about.component';
+import { DatosWSComponent } from './datos-ws/datos-ws.component';
 
 import { DataService } from './data.service';
-import { AboutComponent } from './about/about.component';
+
 
 const rutas : Route[]  = [  //arreglo de rutas para la app
   {path : '',component : AppComponent},
   {path : 'about', component : AboutComponent},
-  {path : 'user', component : UserComponent}
+  {path : 'user', component : UserComponent},
+  {path : 'DatosWS', component : DatosWSComponent},
 ]
 
 @NgModule({
@@ -22,7 +25,8 @@ const rutas : Route[]  = [  //arreglo de rutas para la app
     AppComponent,
     XyzComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    DatosWSComponent
   ],
   imports: [
     BrowserModule,

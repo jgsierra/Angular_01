@@ -1,4 +1,60 @@
-<p>
+<!-- <p>
     {{ nameUser }}
     
-</p>
+</p> -->
+
+<app-xyz></app-xyz>
+
+<ul>
+  <li *ngFor="let user of users">
+<p>{{user}}</p>
+<!-- <app-user [nameUser]="user" ></app-user> -->
+
+  </li>
+</ul>
+
+
+<div style="align-content: center">
+  <p> Nombre:> {{ name }} <</p>
+  <p> Edad:> {{ age }} <</p>
+  <p> Direccion:> {{ address.street  }} Ciudad:> {{ address.city }}<</p>
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+          {{ hobby }}
+    </li>
+  </ul>
+</div>
+
+<h2>Formulario</h2>
+
+<form (submit)="AddUser(newUser)">
+<input type="text" #newUser>   
+<button>Send User</button>
+</form>
+
+<div>
+  <p>Array de usuarios</p>
+  <ul>
+      <li *ngFor="let user of users">
+        {{ user }} <button (click)="deleteUser(user)">x</button></li>
+  </ul>
+
+  <button (click)="Avisar()">    | Desplegar |  </button>
+
+</div>
+
+<div >
+  <div class="content">
+      <h2>Doble enlace de datos</h2>
+      
+  </div>
+  <h5>utilizando [(ngModel)]</h5>
+  <form>
+<input type="text" name="name" [(ngModel)]="name">
+<input type="text" name="age" [(ngModel)]="age">
+  </form>
+Nombre = {{ name }} <br>
+Edad = {{ age}}
+
+<hr>
+
