@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { AppModule } from '../app.module';
+//import { AppModule } from '../app.module';
 
 
 @Component({
@@ -27,7 +27,7 @@ export class UserComponent implements OnInit {
 /* Metodo para el botton*/
  Avisar()
  {
-   alert('Promise ' + this.name + ' || Nombre del modulo: '+  AppModule.name);
+   alert('Promise ' + this.name + ' || Nombre del modulo: CHINO KIN');
  }
   
  AddUser(newUser)
